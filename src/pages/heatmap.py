@@ -64,7 +64,7 @@ cursor = connection.cursor()
 heatmap = collect_real_time_data()
 
 
-### Live Heatmap Page Content ###
+#---------------------- Live Heatmap Page Content -----------------------------#
 # Dropdown menu items for block number selection
 heatmap_dropdown_menu_items = [
     dbc.DropdownMenuItem("Block 123", id="heatmap-dropdown-menu-item-1"),
@@ -141,7 +141,7 @@ live_heatmap_graph = dbc.Card(
     )
 )
 
-# Live heatmap page layout
+#---------------------- Live heatmap page layout --------------------------#
 layout = dbc.Row(
     [
         dbc.Col(live_heatmap_filter, width="3px"),
@@ -152,11 +152,12 @@ layout = dbc.Row(
             ],
             id="live-heatmap-modal",
             fullscreen=True,
-        ),
-        
+        )
     ]
 )
 
+
+#---------------------- Callback Functions --------------------------#
 # Callback function to update the live heatmap graph periodically
 @callback(
     Output('block-heatmap', 'figure'),
