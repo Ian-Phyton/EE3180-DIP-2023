@@ -1,8 +1,10 @@
 from dash import html, register_page
 import dash_bootstrap_components as dbc
 
+# Initialization
 register_page(__name__, path="/")
 
+# Home page content layout
 layout = html.Div(
     [
         dbc.Card(
