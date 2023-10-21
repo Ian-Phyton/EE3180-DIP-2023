@@ -257,4 +257,4 @@ def update_graph(start_date, end_date, start_time, end_time, selected_lines):
     start_datetime = f'{start_date[0]} {str(start_time)}'
     end_datetime = f'{end_date[1]} {str(end_time)}'
     historical_graph = collect_historical_data(start_datetime, end_datetime, selected_lines)
-    return historical_graph, historical_data_graph
+    return historical_graph
