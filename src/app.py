@@ -23,7 +23,7 @@ app.layout = dbc.Container(
     ]
 )
 
-# Callback function for collapsible buttons
+# Callback function for collapsible navbar components
 @app.callback(
     Output("navbar-collapse", "is_open"),
     [Input("navbar-toggler", "n_clicks")],
