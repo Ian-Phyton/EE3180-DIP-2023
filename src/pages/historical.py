@@ -7,8 +7,7 @@ import psycopg2
 from dash.exceptions import PreventUpdate
 
 
-
-# Function to generate options with 10-minute intervals
+### Function to generate options with 10-minute intervals
 def generate_options_time():
     return [{'label': f'{hour:02d}:{minute:02d}', 'value': f'{hour:02d}:{minute:02d}'} for hour in range(24) for minute in range(0, 60, 10)]
 
@@ -215,7 +214,7 @@ historical_data_graph = dbc.Card(
     )
 )
 
-# Historical data page layout
+#--------------------------- Historical data page layout -----------------------------#
 layout = dbc.Row(
     [
         dbc.Col(historical_data_filter, width="3px"),
@@ -225,7 +224,7 @@ layout = dbc.Row(
     ]
 )
 
-
+#----------------------------- Callback Functions --------------------------------#
 # Callback function to expand historical datetime selector after block number is selected
 @callback(
     [
@@ -240,7 +239,6 @@ def show_historical_selectors(block_number):
         return historical_data_datetime, historical_data_unit, historical_data_graph
     else:
         return "", "", ""
-
 
 # Callback function for generating historical data graph based on selected datetime and unit
 @callback(
