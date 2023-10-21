@@ -1,10 +1,9 @@
 from dash import html
 import dash_bootstrap_components as dbc
 
+### This file contains all elements used for the main layout of the website
 
-
-#-------------------------- HTML Elements --------------------------#
-### Website Header ###
+# Website Header
 header = dbc.Row(
     [
         dbc.Col(
@@ -19,7 +18,7 @@ header = dbc.Row(
 )
 
 
-### Website Navbar ###
+# Website Navbar
 # Navigation bar buttons linking with other pages
 nav_buttons = dbc.Row(
     [
