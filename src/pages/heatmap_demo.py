@@ -6,7 +6,7 @@ import pandas as pd
 
 
 def collect_real_time_data():
-    real_time_df = pd.read_csv('heatmap_demo_data.csv')
+    real_time_df = pd.read_csv('./pages/heatmap_demo_data.csv')
     real_time_df = real_time_df.sort_values(by=['level'], ascending=True)
     real_time_df['level'] = real_time_df['level'].astype(str)
     heatmap = px.density_heatmap(
