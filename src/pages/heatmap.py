@@ -21,7 +21,7 @@ def collect_real_time_data():
             RankedData
         WHERE 
             row_num = 1 AND 
-            sensorid IN ('42261f3', '42262a', '4226076', '4226087', '4226222', '42261ea');
+            sensorid IN ('42261f3', '422607c', '4226076', '4226087', '4226222', '42261ea');
     '''
     real_time_df = pd.read_sql_query(real_time_query, con=connection)
     real_time_df = real_time_df.sort_values(by=['level'], ascending=True)
